@@ -1,4 +1,5 @@
 // HTML Variables
+var quizBody = document.getElementById("quiz");
 var gameoverDiv = document.getElementById("gameover")
 var startQuizButton = document.getElementById("startbtn");
 var startQuizDiv = document.getElementById("startpage");
@@ -12,13 +13,17 @@ var quizQuestions = [{
     question: "Which method would you use to find an ID element?",
     ChoiceA: "getElementsById()",
     ChoiceB: "getElementbyId()",
-    ChoiceC: "getElementByID()",
+    ChoiceC: "getElementById()",
     ChoiceD: "getElementsById()",
-    correctAnswer: "b" },
+    correctAnswer: "c" },
 {
-    
+
 }
-]
+];
+
+//Additional Variables
+var currentQuestionIndex = 0;
+var correct;
 
 // Function to generate the Quiz
 function generateQuizQuestion() {
