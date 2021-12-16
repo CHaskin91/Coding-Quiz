@@ -1,6 +1,9 @@
 // HTML Variables
 var quizBody = document.getElementById("quiz");
-var gameoverDiv = document.getElementById("gameover")
+var resultsEl = document.getElementById("result");
+var finalScoreEl = document.getElementById("finalScore");
+var gameoverDiv = document.getElementById("gameover");
+var questionsEl = document.getElementById("questions")
 var startQuizButton = document.getElementById("startbtn");
 var startQuizDiv = document.getElementById("startpage");
 var buttonA = document.getElementById("a");
@@ -93,6 +96,24 @@ function startQuiz() {
 
     // Timer will go here
 
+}
+
+//Check Answer Function
+function checkAnswer(answer) {
+    correct = quizQuestions[currentQuestionIndex].correctAnswer;
+
+    if (answer === correct && currentQuestionIndex !== finalQuestionIndex) {
+        score++;
+        alert("That Is Correct!");
+        currentQuestionIndex++;
+        generateQuizQuestion();
+    } else if (answer !== correct && currentQuestionIndex !== finalQuestionIndex) {
+        alert("That Is Incorrect.")
+        currentQuestionIndex++;
+        generateQuizQuestion();
+    } else {
+        showScore();
+    }
 }
 
 // This button will start the quiz
