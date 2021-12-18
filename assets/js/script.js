@@ -185,6 +185,15 @@ function clearScore() {
     highscoreDisplayScore.textContent = "";
 }
 
+// Replay Quiz Function
+function replayQuiz() {
+    highscoreContainer.style.display = "none";
+    gameoverDiv.style.display = "none";
+    startQuizDiv.style.display = "flex";
+    timeLeft = 60;
+    score = 0;
+    currentQuestionIndex = 0;
+}
 
 //Check Answer Function
 function checkAnswer(answer) {
