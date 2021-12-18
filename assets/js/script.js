@@ -119,6 +119,56 @@ function startQuiz() {
     quizBody.style.display = "block";
 }
 
+// Show Score Function
+function showScore() {
+    quizBody.style.display = "none"
+    gameoverDiv.style.display = "flex";
+    clearInterval(timerInterval);
+    highscoreInputName.value = "";
+    finalScoreEl.innerHTML = "You got " + score + " out of " + quizQuestions.length + " correct!";
+}
+
+// Submit Button. The high score function will save and stringify the array of high scores saved to local storage.
+submitScoreBtn.addEventListener("click", function highscore() {
+    if(highscoreInputName.value === "") {
+        alert("Initials cannot be blank");
+        return false;
+    } else {
+        var savedHighscores = JSON.parse(localStorage.getItem("savedHighscores")) || [];
+        var currentUser = highscoreInputName.value.trim();
+        var currentHighscore = {
+            name : currentUser,
+            score : score
+        };
+
+        gameoverDiv.style.display = "none";
+        highscoreContainer.style.display = "flex";
+        highscoreDiv.style.display = "block";
+        endGameBtns.style.display = "flex";
+
+        savedHighscores.push(currentHighscore);
+        localStorage.setItem("savedHighscores", JSON.stringify(savedHighscores));
+        generateHighscores();
+    }
+});
+
+// Generate High Scores Function
+function generateHighscores() {
+    highscoreDisplayName.innerHTML = "";
+    highscoreDisplayScore.innerHTML = "";
+    var highscores = JSON.parse(localStorage.getItem("savedHighscores")) || [];
+    for (i = 0; i < highscores.length; i++) {
+        var newNameSpan = document.createElement("li");
+        var newScoreSpan = document.createElement("li");
+        newNameSpan.textContent = highscores[i].name;
+        newScoreSpan.textContent = highscores[i].score;
+        highscoreDisplayName.appendChild(newNameSpan);
+        highscoreDisplayScore.appendChild(newScoreSpan);
+    }
+}
+
+// Show High Score Function
+
 //Check Answer Function
 function checkAnswer(answer) {
     correct = quizQuestions[currentQuestionIndex].correctAnswer;
