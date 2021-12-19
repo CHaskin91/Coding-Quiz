@@ -106,7 +106,7 @@ function startQuiz() {
     startQuizDiv.style.display = "none";
     generateQuizQuestion();
 
-    // Timer will go here
+    // Timer
     timerInterval = setInterval(function() {
         timeLeft--;
         quizTimer.textContent = "Time Left: " + timeLeft;
@@ -121,7 +121,7 @@ function startQuiz() {
 
 // Show Score Function
 function showScore() {
-    quizBody.style.display = "none"
+    quizBody.style.display = "none";
     gameoverDiv.style.display = "flex";
     clearInterval(timerInterval);
     highscoreInputName.value = "";
@@ -157,7 +157,7 @@ function generateHighscores() {
     highscoreDisplayName.innerHTML = "";
     highscoreDisplayScore.innerHTML = "";
     var highscores = JSON.parse(localStorage.getItem("savedHighscores")) || [];
-    for (i = 0; i < highscores.length; i++) {
+    for (i=0; i<highscores.length; i++) {
         var newNameSpan = document.createElement("li");
         var newScoreSpan = document.createElement("li");
         newNameSpan.textContent = highscores[i].name;
