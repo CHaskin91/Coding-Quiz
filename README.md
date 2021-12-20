@@ -9,4 +9,4 @@ A coding quiz to test your JavaScript knowledge!  When user clicks the start but
 
 ![image](https://github.com/CHaskin91/Coding-Quiz/blob/main/assets/images/screenshot1.PNG)
 ![image](https://github.com/CHaskin91/Coding-Quiz/blob/main/assets/images/Screenshot2.PNG)
-![image]()
+![image](https://github.com/CHaskin91/Coding-Quiz/blob/main/assets/images/Screenshot3.PNG)
