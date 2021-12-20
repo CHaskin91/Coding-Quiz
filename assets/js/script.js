@@ -118,7 +118,7 @@ function startQuiz() {
     }, 1000);
     quizBody.style.display = "block";
 }
-
+console.log(highscoreInputName)
 // Show Score Function
 function showScore() {
     quizBody.style.display = "none";

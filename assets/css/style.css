@@ -6,7 +6,8 @@
 li {
     padding-bottom: 3px;
     color: black;
-    text-shadow: 1.5px 1px 3px goldenrod;
+    text-shadow: 1.5px 1px 3px white;
+    background-color: goldenrod;
     list-style-type: none;
 }
 p{
@@ -24,6 +25,7 @@ h2 {
 
 h3 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: goldenrod;
 }
 
 input {
@@ -100,7 +102,7 @@ button:hover {
     border-color: black;
     border-bottom-style: groove;
     padding-bottom: .3rem;
-    background: lightgray;
+    background: goldenrod;
 }
 
 #highscore-header {
@@ -129,6 +131,7 @@ button:hover {
 
 #highscore-initials {
     display: inline-block;
+    background-color: goldenrod;
     padding-left: 9.5rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
@@ -136,6 +139,7 @@ button:hover {
 
 #highscore-score {
     float: right;
+    background-color: goldenrod;
     padding-right: 8.75rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
